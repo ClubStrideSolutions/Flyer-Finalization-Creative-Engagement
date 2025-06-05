@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Youth Public Health Leadership – Week 4 Session 2</title>
+  <meta name="description" content="Flyer Finalization & Creative Peer Engagement Practice" />
+
+  <!-- ========= GLOBAL STYLES ========= -->
+  <style>
+    :root{
+      --primary-color:#4c6ef5;
+      --secondary-color:#40c057;
+      --accent-color:#fd7e14;
+      --dark-color:#343a40;
+      --light-color:#f8f9fa;
+      --text-color:#212529;
+      --shadow:0 4px 8px rgba(0,0,0,.1)
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',Tahoma,sans-serif;line-height:1.6;color:var(--text-color);background:#f1f3f5}
+    .container{max-width:1200px;margin:auto;padding:5px}
+    header{background:linear-gradient(135deg,var(--primary-color),#228be6);color:#fff;padding:2.5rem;text-align:center;border-radius:15px;margin-bottom:2rem;box-shadow:var(--shadow)}
+    header h1{font-size:2.2rem;margin-bottom:.5rem;font-weight:700}
+    header h2{font-size:1.3rem;font-weight:600;margin-bottom:.4rem;opacity:.95}
+    header p{font-size:1.05rem;margin-bottom:1rem;opacity:.9}
+    .date-box{display:inline-block;background:rgba(255,255,255,.2);padding:.5rem 1.2rem;border-radius:30px;font-weight:500;margin-top:.4rem}
+
+    /* CONTENT BLOCKS */
+    .intro-section,.activities-section{background:#fff;border-radius:15px;padding:2rem;margin-bottom:2rem;box-shadow:var(--shadow)}
+    .intro-message{text-align:center;max-width:800px;margin:0 auto 1.5rem;font-size:1.1rem;line-height:1.7}
+    .section-title{color:var(--primary-color);font-size:1.8rem;margin-bottom:1.5rem;text-align:center;position:relative;padding-bottom:.5rem}
+    .section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100px;height:3px;background:var(--primary-color)}
+
+    /* ACTIVITY GRID */
+    .activity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+    .activity-card{background:var(--light-color);border-radius:10px;padding:1.5rem;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:transform .3s;cursor:pointer;position:relative}
+    .activity-card:hover{transform:translateY(-5px)}
+    .activity-card h4{color:var(--primary-color);margin-bottom:1rem;font-size:1.1rem;display:flex;align-items:center;justify-content:space-between}
+    .activity-card h4 .time{font-size:.8rem;padding:.3rem .6rem;border-radius:20px;background:var(--accent-color);color:#fff;font-weight:400}
+    .activity-card ul{padding-left:1.2rem;margin-top:.5rem}
+    .activity-card li{margin-bottom:.5rem;color:#495057;font-size:.95rem}
+    .expand-icon{position:absolute;bottom:15px;right:15px;background:var(--primary-color);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;transition:.3s}
+    .detailed-content{display:none;background:#fff;border-radius:10px;padding:1.5rem;margin-top:1rem;border-top:3px solid var(--primary-color)}
+    .detailed-content.active{display:block;animation:fade .5s}
+    
+    @keyframes fade{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+    
+    /* BOXES FOR KEY TERMS, DISCUSSION, ACTIVITIES, REFLECTION */
+    .definition-box{background:#e7f5ff;border-left:4px solid #4dabf7;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    .discussion-box{background:#fff9db;border-left:4px solid #fcc419;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    .activity-box{background:#f3f0ff;border-left:4px solid #7950f2;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    .feedback-box{background:#ebfbee;border-left:4px solid #40c057;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    .warning-box{background:#ffe3e3;border-left:4px solid #fa5252;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    
+    /* Quick tip boxes */
+    .tip-box{background:#f8f9fa;border:2px dashed #adb5bd;padding:1rem;border-radius:8px;margin:1rem 0}
+    .tip-box strong{color:var(--primary-color)}
+
+    /* Step-by-step lists */
+    .step-list{counter-reset:step-counter;list-style:none;padding:0}
+    .step-list li{counter-increment:step-counter;margin-bottom:1rem;padding-left:3rem;position:relative}
+    .step-list li::before{content:counter(step-counter);position:absolute;left:0;top:0;background:var(--primary-color);color:#fff;width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold}
+
+    /* Engagement strategy cards */
+    .strategy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin:1.5rem 0}
+    .strategy-card{background:#f8f9fa;border:2px solid var(--secondary-color);border-radius:10px;padding:1.5rem}
+    .strategy-card h5{color:var(--secondary-color);margin-bottom:1rem}
+    
+    /* FOOTER */
+    .footer{text-align:center;padding:2rem;background:var(--dark-color);color:#fff;border-radius:15px;margin-top:2rem;font-size:.9rem}
+    @media(max-width:768px){.activity-grid{grid-template-columns:1fr}.strategy-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ===== HEADER ===== -->
+    <header>
+      <h1>Flyer Finalization & Creative Engagement</h1>
+      <h2>Week 4, Session 2</h2>
+      <p>Complete your materials and practice creative peer engagement strategies</p>
+      <div class="date-box">Wednesday, June 4, 2025</div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+      <div class="intro-message">
+        <p><strong>Let's Bring It All Together!</strong><br>Today we'll finalize your flyers, practice your pitches, and prepare creative engagement activities that make sharing health resources fun and memorable. Remember: we're not just handing out papers – we're starting conversations that can change lives.</p>
+        <div class="date-box">Session Duration: 90 minutes</div>
+      </div>
+    </section>
+
+    <!-- Activities -->
+    <section class="activities-section">
+      <h2 class="section-title">Session Activities</h2>
+      <p style="text-align:center;margin-bottom:20px;color:#495057;">Clear instructions for each activity – keep it simple and effective!</p>
+      
+      <div class="activity-grid">
+        <!-- Activity 1: Flyer Finalization -->
+        <div class="activity-card" onclick="toggleSection('act-flyer')">
+          <h4>Flyer Finalization Sprint <span class="time">20 mins</span></h4>
+          <ul>
+            <li>Complete final edits</li>
+            <li>Quality check with checklist</li>
+            <li>Print test copies</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="act-flyer" class="detailed-content">
+            <div class="warning-box">
+              <h4>⏰ Time Check</h4>
+              <p>This is your LAST chance to make changes before printing! Work efficiently.</p>
+            </div>
+            
+            <div class="activity-box">
+              <h4>20-Minute Sprint Instructions</h4>
+              
+              <ol class="step-list">
+                <li><strong>Minutes 1-10: Final Edits</strong>
+                  <ul>
+                    <li>Check all phone numbers and addresses one last time</li>
+                    <li>Verify QR codes work (test with your phone)</li>
+                    <li>Make sure text is readable (no tiny fonts!)</li>
+                    <li>Confirm colors print well (not too light)</li>
+                  </ul>
+                </li>
+                
+                <li><strong>Minutes 11-15: Partner Check</strong>
+                  <ul>
+                    <li>Trade flyers with another team</li>
+                    <li>Look for: typos, unclear information, missing details</li>
+                    <li>Give specific feedback: "The phone number is hard to read" not "It looks weird"</li>
+                  </ul>
+                </li>
+                
+                <li><strong>Minutes 16-20: Submit for Printing</strong>
+                  <ul>
+                    <li>Make final corrections based on feedback</li>
+                    <li>Save as PDF (best for printing)</li>
+                    <li>Upload to shared folder</li>
+                    <li>Fill out print request form (how many copies needed)</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            
+            <div class="tip-box">
+              <strong>Quick Quality Checklist:</strong>
+              <ul>
+                <li>✓ Organization name and logo visible</li>
+                <li>✓ Contact info is correct and easy to find</li>
+                <li>✓ Hours of operation included</li>
+                <li>✓ "Free" or "No cost" clearly stated</li>
+                <li>✓ Privacy/confidentiality mentioned</li>
+                <li>✓ At least one visual element (icon, photo, or graphic)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 2: Group Demo Pitches -->
+        <div class="activity-card" onclick="toggleSection('act-demo')">
+          <h4>Group Demo: 30-Second Flyer Pitches <span class="time">30 mins</span></h4>
+          <ul>
+            <li>Practice your pitch</li>
+            <li>Demo to full group</li>
+            <li>Gather peer feedback</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="act-demo" class="detailed-content">
+            <div class="definition-box">
+              <h4>What's a 30-Second Pitch?</h4>
+              <p>A quick, natural way to introduce your flyer that covers:</p>
+              <ul>
+                <li><strong>Hook:</strong> Get their attention (5 seconds)</li>
+                <li><strong>Value:</strong> Why they should care (10 seconds)</li>
+                <li><strong>Details:</strong> Key info from flyer (10 seconds)</li>
+                <li><strong>Action:</strong> What to do next (5 seconds)</li>
+              </ul>
+            </div>
+            
+            <div class="activity-box">
+              <h4>Demo Instructions</h4>
+              
+              <p><strong>Part 1: Pitch Prep (10 minutes)</strong></p>
+              <div class="tip-box">
+                <strong>Example Pitch Structure:</strong><br>
+                "Hey! (show flyer) Real quick – did you know you can get free STI testing without your parents knowing? (pause) This shows all the places in Vallejo where it's totally confidential and free. They even have Spanish speakers. (point to QR code) Scan this to find the closest one. Keep it in case you or a friend needs it!"
+              </div>
+              
+              <ul>
+                <li>Write your pitch using the structure above</li>
+                <li>Practice with your team 2-3 times</li>
+                <li>Time yourself – aim for 25-35 seconds</li>
+                <li>Make it sound like YOU, not a robot!</li>
+              </ul>
+              
+              <p><strong>Part 2: Group Demos (15 minutes)</strong></p>
+              <ul>
+                <li>Each team presents their pitch to the full group</li>
+                <li>Hold up your flyer so everyone can see</li>
+                <li>Speak clearly but conversationally</li>
+                <li>It's okay to be nervous – we're all learning!</li>
+              </ul>
+              
+              <p><strong>Part 3: Peer Feedback (5 minutes)</strong></p>
+              <div class="feedback-box">
+                <h4>Feedback Focus</h4>
+                <p>After each pitch, share:</p>
+                <ul>
+                  <li>🌟 One thing that worked well</li>
+                  <li>💡 One specific suggestion</li>
+                  <li>✅ Would you take the flyer? Why/why not?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 3: Creative Engagement Strategies -->
+        <div class="activity-card" onclick="toggleSection('act-creative')">
+          <h4>Creative Engagement Strategy Practice <span class="time">30 mins</span></h4>
+          <ul>
+            <li>Choose your strategy</li>
+            <li>Prepare materials</li>
+            <li>Practice with peers</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="act-creative" class="detailed-content">
+            <div class="discussion-box">
+              <h4>Today's Focus: Pick ONE Strategy to Master</h4>
+              <p>Don't try to do everything! Choose the strategy that feels most natural to you and your team.</p>
+            </div>
+            
+            <div class="strategy-grid">
+              <div class="strategy-card">
+                <h5>Strategy 1: Stress Check Stickers</h5>
+                <p><strong>What you need:</strong> Sticker sheets (provided), resource cards</p>
+                <p><strong>How it works:</strong></p>
+                <ul>
+                  <li>Approach: "Hey, how's your day going?"</li>
+                  <li>Offer sticker based on response</li>
+                  <li>😊 = "Keep it up!" + general wellness resource</li>
+                  <li>😟 = "Been there!" + mental health resource</li>
+                  <li>🍕 = "Same!" + food resource card</li>
+                </ul>
+                <p><strong>Practice focus:</strong> Natural conversation starters</p>
+              </div>
+              
+              <div class="strategy-card">
+                <h5>Strategy 2: Myth Buster Challenge</h5>
+                <p><strong>What you need:</strong> True/False cards, resource flyers as "prizes"</p>
+                <p><strong>How it works:</strong></p>
+                <ul>
+                  <li>Set up at lunch table or hallway</li>
+                  <li>Call out: "Quick health myth quiz – win free stuff!"</li>
+                  <li>Ask one question: "True or false: You need parent permission for counseling?"</li>
+                  <li>Correct answer = resource card + "You're right! Here's more info"</li>
+                </ul>
+                <p><strong>Practice focus:</strong> Making it fun, not preachy</p>
+              </div>
+              
+              <div class="strategy-card">
+                <h5>Strategy 3: Wellness Playlist Exchange</h5>
+                <p><strong>What you need:</strong> Playlist cards, QR codes to resources</p>
+                <p><strong>How it works:</strong></p>
+                <ul>
+                  <li>Create cards with song suggestions for different moods</li>
+                  <li>Approach: "Trading wellness playlists – what helps you chill?"</li>
+                  <li>Exchange song ideas, give card with playlist + resource</li>
+                  <li>Each mood playlist links to relevant support</li>
+                </ul>
+                <p><strong>Practice focus:</strong> Connecting through shared interests</p>
+              </div>
+            </div>
+            
+            <div class="activity-box">
+              <h4>30-Minute Practice Session</h4>
+              
+              <ol class="step-list">
+                <li><strong>Choose Your Strategy (5 minutes)</strong>
+                  <ul>
+                    <li>Pick ONE as a team</li>
+                    <li>Consider your school culture – what would work best?</li>
+                    <li>Think about YOUR comfort level</li>
+                  </ul>
+                </li>
+                
+                <li><strong>Prepare Materials (10 minutes)</strong>
+                  <ul>
+                    <li>Gather supplies from resource table</li>
+                    <li>Organize your materials in a way that's easy to carry</li>
+                    <li>Make sure you have enough for practice</li>
+                  </ul>
+                </li>
+                
+                <li><strong>Practice Rounds (15 minutes)</strong>
+                  <ul>
+                    <li>Pair up with another team</li>
+                    <li>Take turns being "students" and "peer educators"</li>
+                    <li>Run through your strategy 3 times each</li>
+                    <li>Give feedback: What felt natural? What was awkward?</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            
+            <div class="tip-box">
+              <strong>Remember:</strong> The goal is to make resources feel like friendly help, not homework! Keep it light, keep it real, and don't force conversations. Sometimes just leaving resources in bathroom stalls or study areas works too!
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 4: Implementation Planning -->
+        <div class="activity-card" onclick="toggleSection('act-plan')">
+          <h4>Launch Week Planning <span class="time">10 mins</span></h4>
+          <ul>
+            <li>Digital launch strategy (Mon-Wed)</li>
+            <li>In-person event planning (Thursday)</li>
+            <li>Assign roles for both phases</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="act-plan" class="detailed-content">
+            <div class="activity-box">
+              <h4>Two-Phase Launch Plan</h4>
+              
+              <p><strong>Phase 1: Digital Launch (Monday-Wednesday)</strong></p>
+              <ol>
+                <li><strong>Monday Launch:</strong>
+                  <ul>
+                    <li>Share flyers digitally (social media, group chats)</li>
+                    <li>Post in school online platforms</li>
+                    <li>Text friends with personal messages</li>
+                  </ul>
+                </li>
+                
+                <li><strong>Digital Engagement Activities:</strong>
+                  <ul>
+                    <li>Instagram story polls (myth busters)</li>
+                    <li>Snapchat wellness playlist shares</li>
+                    <li>TikTok-style quick resource videos</li>
+                    <li>WhatsApp/text message campaigns</li>
+                  </ul>
+                </li>
+                
+                <li><strong>Building Buzz:</strong>
+                  <ul>
+                    <li>"Coming Thursday: Free wellness resources!"</li>
+                    <li>Create countdown posts</li>
+                    <li>Get friends to reshare</li>
+                  </ul>
+                </li>
+              </ol>
+              
+              <p><strong>Phase 2: In-Person Event (Thursday)</strong></p>
+              <ol>
+                <li><strong>WHERE will you set up?</strong>
+                  <ul>
+                    <li>High-traffic area during lunch/after school</li>
+                    <li>Get permission by Monday</li>
+                  </ul>
+                </li>
+                
+                <li><strong>WHO does what?</strong>
+                  <ul>
+                    <li>Digital team (Mon-Wed): Creates and shares content</li>
+                    <li>Setup crew (Thursday): Arrives early to prepare</li>
+                    <li>Engagement team (Thursday): Runs activities</li>
+                    <li>Documentation team: Photos/tracking for both phases</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            
+            <div class="feedback-box">
+              <h4>Success Metrics</h4>
+              <p><strong>Digital Phase (Mon-Wed):</strong></p>
+              <ul>
+                <li>Number of shares/reposts</li>
+                <li>Digital engagement (likes, comments, DMs)</li>
+                <li>Friends committed to attending Thursday</li>
+              </ul>
+              <p><strong>In-Person Event (Thursday):</strong></p>
+              <ul>
+                <li>Physical flyers distributed</li>
+                <li>Conversations had</li>
+                <li>Activities completed</li>
+                <li>Contact info collected for follow-up</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wrap-Up -->
+    <section class="activities-section">
+      <h2 class="section-title">Ready for Launch Week!</h2>
+      <div class="activity-grid">
+        <div class="activity-card" style="cursor:auto;">
+          <h4>Your Launch Week Timeline <span class="time">Take Home</span></h4>
+          <ul>
+            <li>✓ Monday-Wednesday: Digital campaign launch</li>
+            <li>✓ Thursday: In-person outreach event</li>
+            <li>✓ Creative strategies adapted for both digital and in-person</li>
+            <li>✓ Team roles assigned for all phases</li>
+          </ul>
+          <div class="detailed-content" style="display:block;">
+            <div class="tip-box">
+              <strong>This Weekend:</strong> Prepare your digital content! Take photos of flyers, create shareable graphics, and plan your social media posts. The digital launch starts Monday morning!
+            </div>
+            
+            <p><strong>Digital Launch (Monday-Wednesday):</strong></p>
+            <ul>
+              <li>Post flyers on all your social media</li>
+              <li>Share in group chats and class Discord/Slack channels</li>
+              <li>Create Instagram stories with myth buster polls</li>
+              <li>Text personal invites for Thursday's event</li>
+              <li>Track digital engagement (screenshots for documentation)</li>
+            </ul>
+            
+            <p><strong>In-Person Event (Thursday):</strong></p>
+            <ul>
+              <li>Pick up printed flyers Thursday morning</li>
+              <li>Bring all creative engagement materials</li>
+              <li>Set up in approved location during lunch/after school</li>
+              <li>Run your practiced activities</li>
+              <li>Document with photos and numbers</li>
+            </ul>
+            
+            <p style="text-align:center;margin-top:2rem;font-size:1.2rem;color:var(--secondary-color);">
+              <strong>Remember: Digital buzz builds Thursday's success! Start strong on Monday! 🚀</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© 2025 Health Amplified · Youth Public Health Action &amp; Collaborative Systems Lab</p>
+      <p>Club Stride · Contact: javier@clubstride.org | (707) 204-3160</p>
+    </footer>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    function toggleSection(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.classList.toggle('active');
+      const card = el.closest('.activity-card');
+      if(card){
+        const expanded = el.classList.contains('active');
+        card.setAttribute('aria-expanded', expanded);
+        const icon = card.querySelector('.expand-icon');
+        if(icon) icon.textContent = expanded ? '–' : '+';
+      }
+    }
+  </script>
+</body>
+</html>
